@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "0d863fac-93ce-49cd-ad9b-898d67780186",
+		"name": "Reservation Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9992115"
+	},
+	"item": [
+		{
+			"name": "Matches",
+			"item": [
+				{
+					"name": "Get All Matches",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0NDI1MjczLCJpYXQiOjE2ODQzODkyNzN9.JmfI9PtVzGjU_DYItXKa-BzNAh2oCpsSlSVJJWAW8YCIuy1gQIm6IFGSLg9xvqeqIYlVPpfVOOmchCJ9Zltdsg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8282/reservation/matches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"reservation",
+								"matches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Match By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0MzE4ODk4LCJpYXQiOjE2ODQyODI4OTh9.8RFTB-y5Rh7xJKWx1vVXLN8W1PSpGcOV4C3lDg3PKifGHnH7GAi_BhSm8WpitXrJjNkxJ13rxdo37RCDdj-g2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8282/reservation/matches/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"reservation",
+								"matches",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0MzE4ODk4LCJpYXQiOjE2ODQyODI4OTh9.8RFTB-y5Rh7xJKWx1vVXLN8W1PSpGcOV4C3lDg3PKifGHnH7GAi_BhSm8WpitXrJjNkxJ13rxdo37RCDdj-g2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Field Name\",\r\n  \"address\": \"Field Address\",\r\n  \"capacity\": 100\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8282/reservation/fields",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"reservation",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create player",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0NDIyMzkxLCJpYXQiOjE2ODQzODYzOTF9.txR43MPdI0B8G6yeI7FufePoN_a3ez5f-Qqb_EjEMBF_rI5Ag7a6vZsDG2sxGwh9AV-vh41a6uTjjU7P9MCnqQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"country\": \"USA\",\r\n  \"teamId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8282/team-service/player",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"team-service",
+								"player"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "ticket reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0NDI1MjczLCJpYXQiOjE2ODQzODkyNzN9.JmfI9PtVzGjU_DYItXKa-BzNAh2oCpsSlSVJJWAW8YCIuy1gQIm6IFGSLg9xvqeqIYlVPpfVOOmchCJ9Zltdsg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerName\": \"John Doe\",\r\n  \"matchId\": 12,\r\n  \"ticketPrice\": 19.99\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8282/reservation/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"reservation",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0NDMyNDk0LCJpYXQiOjE2ODQzOTY0OTR9.BRN_3RYjE5T8e3dyVPlt6lxOJT9F4wcTcWqdaE-m4_pprIOP2VfJoSzyBcQWz9T2UtGtvWNMG5DnOvNHsmMKww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8282/reservation/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"reservation",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "validateToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0MzE4ODk4LCJpYXQiOjE2ODQyODI4OTh9.8RFTB-y5Rh7xJKWx1vVXLN8W1PSpGcOV4C3lDg3PKifGHnH7GAi_BhSm8WpitXrJjNkxJ13rxdo37RCDdj-g2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8282/authentication-service/api/v1/users/validateJwtToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"authentication-service",
+								"api",
+								"v1",
+								"users",
+								"validateJwtToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"christ\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8282/authentication-service/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"authentication-service",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "team",
+			"item": [
+				{
+					"name": "http://localhost:8081/teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0NDMyNDk0LCJpYXQiOjE2ODQzOTY0OTR9.BRN_3RYjE5T8e3dyVPlt6lxOJT9F4wcTcWqdaE-m4_pprIOP2VfJoSzyBcQWz9T2UtGtvWNMG5DnOvNHsmMKww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamName\": \"Sample Team\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8282/team-service/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"team-service",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0NDIyMzkxLCJpYXQiOjE2ODQzODYzOTF9.txR43MPdI0B8G6yeI7FufePoN_a3ez5f-Qqb_EjEMBF_rI5Ag7a6vZsDG2sxGwh9AV-vh41a6uTjjU7P9MCnqQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8282/team-service/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"team-service",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0MzE4ODk4LCJpYXQiOjE2ODQyODI4OTh9.8RFTB-y5Rh7xJKWx1vVXLN8W1PSpGcOV4C3lDg3PKifGHnH7GAi_BhSm8WpitXrJjNkxJ13rxdo37RCDdj-g2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"teamName\": \"teamName 2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8282/team-service/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"team-service",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sample unauthorized",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW56QGV4YW1wbGUuY29tIiwiZXhwIjoxNjg0NDI1MjczLCJpYXQiOjE2ODQzODkyNzN9.JmfI9PtVzGjU_DYItXKa-BzNAh2oCpsSlSVJJWAW8YCIuy1gQIm6IFGSLg9xvqeqIYlVPpfVOOmchCJ9Zltdsg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

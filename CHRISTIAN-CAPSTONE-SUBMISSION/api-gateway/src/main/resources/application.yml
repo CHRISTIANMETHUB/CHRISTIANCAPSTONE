@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        ## service1
+        - id: authentication-service
+          uri: lb://AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/authentication-service/**
+          filters:
+            - JwtFilter
+            - StripPrefix=1
+
+        - id: reservation
+          uri: lb://RESERVATION
+          predicates:
+            - Path=/reservation/**
+          filters:
+            - JwtFilter
+            - StripPrefix=1
+
+        - id: team-service
+          uri: lb://TEAM-SERVICE
+          predicates:
+            - Path=/team-service/**
+          filters:
+            - JwtFilter
+            - StripPrefix=1
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8282
+
